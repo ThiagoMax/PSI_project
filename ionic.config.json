@@ -1,0 +1,7 @@
+{
+  "name": "AgendaMedica",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
