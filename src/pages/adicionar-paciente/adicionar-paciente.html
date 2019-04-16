@@ -1,0 +1,103 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Adicionar Paciente</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>Número do prontuário</ion-label>
+        <ion-input type="number" [(ngModel)]="paciente.numProntuario" maxlength="5"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Nome do paciente</ion-label>
+        <ion-input type="text" [(ngModel)]="paciente.nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sexo</ion-label>
+        <ion-select [(ngModel)]="paciente.sexo">
+          <ion-option [value]="sexo" *ngFor="let sexo of sexos">{{sexo.nome}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Data de nascimento</ion-label>
+        <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="paciente.dataNasc"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Estado civil</ion-label>
+        <ion-select [(ngModel)]="paciente.estCivil">
+          <ion-option [value]="est" *ngFor="let est of estCivil">{{est.nome}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Escolaridade</ion-label>
+        <ion-select [(ngModel)]="paciente.escolaridade">
+          <ion-option [value]="esco" *ngFor="let esco of escolaridade">{{esco.nome}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Religião</ion-label>
+        <ion-input type="text" [(ngModel)]="paciente.religiao"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Telefone de emergência</ion-label>
+        <ion-input type="number" inputmode="tel" [(ngModel)]="paciente.telEmergencia"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Local de atendimento</ion-label>
+        <ion-input type="text" [(ngModel)]="paciente.localAtend"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Data do atendimento</ion-label>
+        <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="paciente.dataAtend"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Data do próximo atendimento</ion-label>
+        <ion-datetime display-format="DD/MM/YYYY" [(ngModel)]="paciente.dataProxAtend"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Hipótese diagnóstica</ion-label>
+        <ion-textarea [(ngModel)]="paciente.hipoteseDiag"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Riscos</ion-label>
+        <ion-textarea [(ngModel)]="paciente.riscos"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Histórico psiquiátrico</ion-label>
+        <ion-textarea [(ngModel)]="paciente.histpsiquiatrico"></ion-textarea>
+      </ion-item>
+
+      <!-- <ion-list>
+        <ion-item *ngFor="let med of medicacao" (click)="detalheMedicacao({{med.nome}})">
+          <ion-label>{{med.nome}}</ion-label>
+        </ion-item>
+      </ion-list> -->
+
+      <ion-item>
+        <ion-label floating>Observações</ion-label>
+        <ion-textarea [(ngModel)]="paciente.observacao"></ion-textarea>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+  <button ion-button color="secondary" block (click)="adicionarPaciente(paciente)">Adicionar</button>
+</ion-content>
