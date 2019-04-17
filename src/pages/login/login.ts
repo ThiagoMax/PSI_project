@@ -15,6 +15,7 @@ import { MeusPacientesPage } from '../meus-pacientes/meus-pacientes';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
+  entryComponents:[ MeusPacientesPage ]
 })
 export class LoginPage {
 
@@ -48,7 +49,7 @@ export class LoginPage {
           this.navCtrl.setRoot(MeusPacientesPage);
         }
       } catch (e) {
-        this.alert('Erro ao logar', e.message);
+        this.alert('Erro ao logar', 'Verifique o email e senha digitados e tente novamente.');
       }
     }
   }
@@ -61,8 +62,7 @@ export class LoginPage {
       this.alert('Erro', 'É necessário informar o email e senha');
     } else {
       try {
-
-        // Chama o método para cadastrar usuário
+        // Chama o método para cadastrar médico
         const result = await this.auth.registrar(user);
         if (result) {
           // Se ocorrer tudo bem redireciona para a página meusPacientes

@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding (ionScroll)='false'>
 
 <ion-card>
   <ion-card-header class="login">
@@ -14,7 +14,7 @@
   <ion-card-content>
     <ion-item>
       <ion-label floating>E-mail</ion-label>
-      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
     </ion-item>
 
     <ion-item>

@@ -13,6 +13,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 import { PacientesProvider } from '../providers/pacientes/pacientes';
+import { MeusPacientesPage } from '../pages/meus-pacientes/meus-pacientes';
 import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-paciente';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-pac
     HomePage,
     LoginPage,
     AdicionarPacientePage,
+    MeusPacientesPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-pac
     MyApp,
     HomePage,
     LoginPage,
-    AdicionarPacientePage
+    AdicionarPacientePage,
+    MeusPacientesPage
   ],
   providers: [
     StatusBar,
