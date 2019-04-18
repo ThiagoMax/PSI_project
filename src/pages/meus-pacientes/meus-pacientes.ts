@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AdicionarPacientePage } from '../adicionar-paciente/adicionar-paciente';
 
 @IonicPage()
 @Component({
@@ -9,6 +10,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class MeusPacientesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  mostrarDetalhes() {
+
+  }
+
+  addPaciente() {
+    this.navCtrl.setRoot(AdicionarPacientePage);
   }
 
   ionViewDidLoad() {
