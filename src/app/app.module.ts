@@ -17,6 +17,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { PacientesProvider } from '../providers/pacientes/pacientes';
 import { MeusPacientesPage } from '../pages/meus-pacientes/meus-pacientes';
 import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-paciente';
+import { AdicionarUsuarioPage } from '../pages/adicionar-usuario/adicionar-usuario';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-pac
     HomePage,
     LoginPage,
     AdicionarPacientePage,
+    AdicionarUsuarioPage,
     MeusPacientesPage
   ],
   imports: [
@@ -40,6 +42,7 @@ import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-pac
     HomePage,
     LoginPage,
     AdicionarPacientePage,
+    AdicionarUsuarioPage,
     MeusPacientesPage
   ],
   providers: [

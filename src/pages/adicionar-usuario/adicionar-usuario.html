@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro do médico</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+      <ion-item>
+        <ion-label stacked>Nome completo</ion-label>
+        <ion-input type="text" [(ngModel)]="user.nomeCompleto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>CPF</ion-label>
+        <ion-input type="tel" [(ngModel)]="user.cpf" maxlength="11"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Registro profissional</ion-label>
+        <ion-input type="tel" [(ngModel)]="user.registroPro"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Confirmar senha</ion-label>
+        <ion-input type="password" [(ngModel)]="user.confirmPass"></ion-input>
+      </ion-item>
+  </ion-card>
+
+  <button ion-button color="secondary" block (click)="addUsuario(user)">Adicionar</button>
+</ion-content>

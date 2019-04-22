@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController, App } from 'ionic
 import { User } from '../../models/user';
 import { AuthProvider } from '../../providers/auth/auth';
 import { MeusPacientesPage } from '../meus-pacientes/meus-pacientes';
+import { AdicionarUsuarioPage } from '../adicionar-usuario/adicionar-usuario';
 
 /**
  * Generated class for the LoginPage page.
@@ -57,24 +58,8 @@ export class LoginPage {
     }
   }
 
-  async register(user: User) {
-
-    // Valida se foi informado email e password
-    if(user.email == "" || user.password == "")
-    {
-      this.alert('Erro', 'É necessário informar o email e senha');
-    } else {
-      try {
-        // Chama o método para cadastrar médico
-        const result = await this.auth.registrar(user);
-        if (result) {
-          // Se ocorrer tudo bem redireciona para a página meusPacientes
-          this.navCtrl.setRoot(MeusPacientesPage);
-        }
-      } catch (e) {
-        this.alert('Erro ao cadastrar', e.message);
-      }
-    }
+  register() {
+    this.navCtrl.setRoot(AdicionarUsuarioPage);
   }
 
   ionViewDidLoad() {
