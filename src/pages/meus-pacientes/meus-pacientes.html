@@ -12,7 +12,7 @@
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card (click)="mostrarDetalhes()">
     <ion-item>
       <ion-label>Thiago Maximiliano</ion-label>
     </ion-item>
@@ -27,7 +27,7 @@
 </ion-fab> -->
 
 <ion-fab right bottom>
-  <!-- <button ion-fab (click)="addPaciente()"><ion-icon name="add"></ion-icon></button> -->
+  <button ion-fab (click)="addPaciente()"><ion-icon name="add"></ion-icon></button>
 </ion-fab>
 
 </ion-content>

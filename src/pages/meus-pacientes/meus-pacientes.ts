@@ -6,6 +6,7 @@ import { AdicionarPacientePage } from '../adicionar-paciente/adicionar-paciente'
 @Component({
   selector: 'page-meus-pacientes',
   templateUrl: 'meus-pacientes.html',
+
 })
 export class MeusPacientesPage {
 
@@ -13,7 +14,7 @@ export class MeusPacientesPage {
   }
 
   mostrarDetalhes() {
-
+    console.log('DETALHES DO PACIENTE APERTADO!!')
   }
 
   addPaciente() {

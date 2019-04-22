@@ -31,7 +31,8 @@ import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-pac
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

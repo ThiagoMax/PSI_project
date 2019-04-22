@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, App } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AuthProvider } from '../../providers/auth/auth';
 import { MeusPacientesPage } from '../meus-pacientes/meus-pacientes';
@@ -24,7 +24,10 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private auth: AuthProvider,
-              private alertCtrl: AlertController) {}
+              private alertCtrl: AlertController,
+              private app: App) {}
+
+  // this.app._setDisableScroll(true);
 
   alert(title, message) {
     let al = this.alertCtrl.create({
