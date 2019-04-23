@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { config } from '../config';
 import { LoginPage } from '../pages/login/login';
 
@@ -34,6 +35,7 @@ import { AdicionarUsuarioPage } from '../pages/adicionar-usuario/adicionar-usuar
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireDatabaseModule,
     HttpClientModule
   ],
   bootstrap: [IonicApp],
