@@ -8,7 +8,8 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { Pacientes } from '../../models/pacientes';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
-//import { map } from 'rxjs-compat/operator/map';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
+
 
 /*
   Generated class for the PacientesProvider provider.
@@ -30,10 +31,9 @@ export class PacientesProvider {
               private afs: AngularFirestore,
               private auth: AuthProvider,
               private db: AngularFireDatabase) {
-    this.auth.user.subscribe(auth => {
 
+    this.auth.user.subscribe(auth => {
       if (auth != null) {
-        console.log('auth != null ' + auth.email);
         this.caminho = '/' + auth.email;
         this.pacientesColllection = afs.collection<Pacientes>(this.caminho, ref => {
           return ref;
@@ -59,11 +59,11 @@ export class PacientesProvider {
     this.db.list('Pacientes').push(paciente);
   }
 
-  // atualizar(paciente: Pacientes, key: string) {
-  //   this.db.list('Pacientes').update(key, paciente);
-  // }
+  atualizar(paciente: Pacientes, key: string) {
+    this.db.list('Pacientes').update(key, paciente);
+  }
 
-  // excluir(key: string) {
-  //   this.db.object('Pacientes/$(key)').remove();
-  // }
+  excluir(key: string) {
+    this.db.object('Pacientes/$(key)').remove();
+  }
 }

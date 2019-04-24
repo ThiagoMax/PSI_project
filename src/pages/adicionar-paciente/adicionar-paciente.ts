@@ -4,13 +4,6 @@ import { PacientesProvider } from '../../providers/pacientes/pacientes';
 import { Pacientes } from '../../models/pacientes';
 import { MeusPacientesPage } from '../meus-pacientes/meus-pacientes';
 
-/**
- * Generated class for the AdicionarPacientePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-adicionar-paciente',
@@ -49,5 +42,9 @@ export class AdicionarPacientePage {
   }
 
   ionViewDidLoad() {}
+
+  backButton() {
+    this.navCtrl.pop();
+  }
 
 }

@@ -5,8 +5,8 @@
 </ion-header>
 
 <ion-content padding>
-    <!-- (click)="mostrarDetalhes()" -->
-  <ion-card *ngFor="let paciente of listaPacientes | async" >
+
+  <ion-card *ngFor="let paciente of listaPacientes | async" (click)="mostrarDetalhes()">
     <ion-item>
       <ion-label>{{paciente.nome}}</ion-label>
     </ion-item>

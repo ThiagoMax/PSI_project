@@ -32,6 +32,6 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    this.pacientes = this.pacientesProvider.retornar();
+
   }
 }

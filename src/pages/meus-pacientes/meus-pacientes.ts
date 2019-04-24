@@ -29,7 +29,6 @@ export class MeusPacientesPage {
 
   buscaTodosPacientes() {
     this.listaPacientes = this.PacientesProvider.retornar();
-    //let array = Object.keys(this.listaPacientes).map(function (key) { return this.listaPacientes[key] });
   }
 
   ionViewDidLoad() {
