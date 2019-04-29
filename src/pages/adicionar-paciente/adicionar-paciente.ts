@@ -37,6 +37,7 @@ export class AdicionarPacientePage {
   }
 
   adicionarPaciente(paciente: Pacientes) {
+    console.log(this.sexos);
     this.pacientesProvider.adicionar(paciente);
     this.navCtrl.setRoot(MeusPacientesPage);
   }

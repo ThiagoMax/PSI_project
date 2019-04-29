@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+      <ion-title>Descrição do paciente</ion-title>  
+      <ion-buttons left>
+          <button ion-button navPop icon-only>
+            <ion-icon name='arrow-round-back'></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-label>Prontuário: {{dadosPaciente.numProntuario}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.nome}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.sexo}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.dataNasc}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.estCivil}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.escolaridade}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.religiao}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.telEmergencia}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.localAtend}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.dataAtend}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.hipoteseDiag}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.riscos}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.histpsiquiatrico}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.medicacaoUso}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{dadosPaciente.observacao}}</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
