@@ -12,6 +12,7 @@ export class MostraDadosPage {
   public dadosPaciente = {} as Pacientes;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    console.log(this.dadosPaciente);
     this.dadosPaciente = this.navParams.get('paciente');
   } 
   
