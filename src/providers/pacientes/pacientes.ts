@@ -8,15 +8,8 @@ import { AuthProvider } from '../../providers/auth/auth';
 import { Pacientes } from '../../models/pacientes';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
 
 
-/*
-  Generated class for the PacientesProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class PacientesProvider {
 

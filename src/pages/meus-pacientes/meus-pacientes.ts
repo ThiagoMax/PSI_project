@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AdicionarPacientePage } from '../adicionar-paciente/adicionar-paciente';
-import { AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Pacientes } from '../../models/pacientes';
 import { PacientesProvider } from '../../providers/pacientes/pacientes';
 import { Observable } from 'rxjs';
+import { MostraDadosPage } from '../mostra-dados/mostra-dados';
 
 @IonicPage()
 @Component({
@@ -19,12 +19,12 @@ export class MeusPacientesPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public PacientesProvider: PacientesProvider) {
   }
 
-  mostrarDetalhes() {
-    console.log('DETALHES DO PACIENTE APERTADO!!')
+  mostrarDados(event, paciente) {
+    this.navCtrl.push(MostraDadosPage, {paciente: paciente});
   }
 
   addPaciente() {
-    this.navCtrl.setRoot(AdicionarPacientePage);
+    this.navCtrl.push(AdicionarPacientePage);
   }
 
   buscaTodosPacientes() {

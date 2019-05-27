@@ -19,6 +19,8 @@ import { PacientesProvider } from '../providers/pacientes/pacientes';
 import { MeusPacientesPage } from '../pages/meus-pacientes/meus-pacientes';
 import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-paciente';
 import { AdicionarUsuarioPage } from '../pages/adicionar-usuario/adicionar-usuario';
+import { MostraDadosPage } from '../pages/mostra-dados/mostra-dados';
+import { ConsultasProvider } from '../providers/consultas/consultas';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { AdicionarUsuarioPage } from '../pages/adicionar-usuario/adicionar-usuar
     LoginPage,
     AdicionarPacientePage,
     AdicionarUsuarioPage,
-    MeusPacientesPage
+    MeusPacientesPage,
+    MostraDadosPage
   ],
   imports: [
     BrowserModule,
@@ -45,14 +48,16 @@ import { AdicionarUsuarioPage } from '../pages/adicionar-usuario/adicionar-usuar
     LoginPage,
     AdicionarPacientePage,
     AdicionarUsuarioPage,
-    MeusPacientesPage
+    MeusPacientesPage,
+    MostraDadosPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    PacientesProvider
+    PacientesProvider,
+    ConsultasProvider
   ]
 })
 export class AppModule {}
