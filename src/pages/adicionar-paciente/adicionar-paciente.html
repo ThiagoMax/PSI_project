@@ -1,14 +1,12 @@
 <ion-header>
-
-  <ion-navbar>
-      <ion-buttons left>
-        <button icon-only ion-button>
-          <ion-icon name='arrow-round-back' (click)="backButton()"></ion-icon>
+  <ion-navbar hideBackButton="true">
+    <ion-title>Adicionar Paciente</ion-title>  
+    <ion-buttons left>
+        <button ion-button navPop icon-only>
+          <ion-icon name='arrow-round-back'></ion-icon>
         </button>
       </ion-buttons>
-    <ion-title>Adicionar Paciente</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -28,7 +26,7 @@
       <ion-item>
         <ion-label>Sexo</ion-label>
         <ion-select [(ngModel)]="paciente.sexo">
-          <ion-option [value]="sexo" *ngFor="let sexo of sexos">{{sexo.nome}}</ion-option>
+          <ion-option [value]="sexo.value" *ngFor="let sexo of sexos">{{sexo.nome}}</ion-option>
         </ion-select>
       </ion-item>
 
@@ -40,14 +38,14 @@
       <ion-item>
         <ion-label>Estado civil</ion-label>
         <ion-select [(ngModel)]="paciente.estCivil">
-          <ion-option [value]="est" *ngFor="let est of estCivil">{{est.nome}}</ion-option>
+          <ion-option [value]="est.value" *ngFor="let est of estCivil">{{est.nome}}</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label>Escolaridade</ion-label>
         <ion-select [(ngModel)]="paciente.escolaridade">
-          <ion-option [value]="esco" *ngFor="let esco of escolaridade">{{esco.nome}}</ion-option>
+          <ion-option [value]="esco.value" *ngFor="let esco of escolaridade">{{esco.nome}}</ion-option>
         </ion-select>
       </ion-item>
 
