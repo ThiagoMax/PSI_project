@@ -1,4 +1,4 @@
-export interface Pacientes {
+export interface Consultas {
   numProntuario: number;
   nome: string;
   sexo: string;

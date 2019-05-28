@@ -21,6 +21,9 @@ import { AdicionarPacientePage } from '../pages/adicionar-paciente/adicionar-pac
 import { AdicionarUsuarioPage } from '../pages/adicionar-usuario/adicionar-usuario';
 import { MostraDadosPage } from '../pages/mostra-dados/mostra-dados';
 import { ConsultasProvider } from '../providers/consultas/consultas';
+import { AdicionarConsultasPage } from '../pages/adicionar-consultas/adicionar-consultas';
+import { MinhasConsultasPage } from '../pages/minhas-consultas/minhas-consultas';
+import { MostraDadosConsultasPage } from '../pages/mostra-dados-consultas/mostra-dados-consultas';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ConsultasProvider } from '../providers/consultas/consultas';
     AdicionarPacientePage,
     AdicionarUsuarioPage,
     MeusPacientesPage,
-    MostraDadosPage
+    MostraDadosPage,
+    AdicionarConsultasPage,
+    MinhasConsultasPage,
+    MostraDadosConsultasPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,10 @@ import { ConsultasProvider } from '../providers/consultas/consultas';
     AdicionarPacientePage,
     AdicionarUsuarioPage,
     MeusPacientesPage,
-    MostraDadosPage
+    MostraDadosPage,
+    AdicionarConsultasPage,
+    MinhasConsultasPage,
+    MostraDadosConsultasPage
   ],
   providers: [
     StatusBar,

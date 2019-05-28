@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar hideBackButton="true">
-      <ion-title>Descrição do paciente</ion-title>  
+      <ion-title>Descrição do paciente</ion-title>
       <ion-buttons left>
           <button ion-button navPop icon-only>
             <ion-icon name='arrow-round-back'></ion-icon>
@@ -57,4 +57,7 @@
       <ion-label>{{dadosPaciente.observacao}}</ion-label>
     </ion-item>
   </ion-card>
+
+  <button ion-button color="primary" block (click)="goToNovaConsulta()" >Nova consulta</button>
+  <button ion-button color="secondary" block (click)="goToListaConsultas()" >Lista de consultas</button>
 </ion-content>

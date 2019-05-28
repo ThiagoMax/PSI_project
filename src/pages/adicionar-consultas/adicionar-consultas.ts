@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Pacientes } from '../../models/pacientes';
+import { ConsultasProvider } from '../../providers/consultas/consultas';
+import { Consultas } from '../../models/consultas';
 
-/**
- * Generated class for the AdicionarConsultasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +12,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AdicionarConsultasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public dadosPaciente = {} as Pacientes;
+
+  status = [
+    { nome: 'Compareceu' },
+    { nome: 'Não compareceu' }
+  ];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private consultasProvider: ConsultasProvider) {
+    this.dadosPaciente = this.navParams.get('paciente');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AdicionarConsultasPage');
+  adicionarConsulta(consulta: Consultas) {
+    this.consultasProvider.adicionar(consulta);
+    this.navCtrl.pop(); //parei akiiii... testar esse pop() depois
   }
+
+  backButton() {
+    this.navCtrl.pop();
+  }
+
+  ionViewDidLoad() {}
 
 }
